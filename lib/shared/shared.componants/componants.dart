@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 //import 'package:audioplayers/audioplayers.dart';
-//import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 
 Widget buildContainer ({
@@ -55,10 +55,12 @@ Widget buildData ({
     ),
     IconButton(onPressed: (){
 
-     /* AssetsAudioPlayer.newPlayer().open(
+      AssetsAudioPlayer.newPlayer().open(
         Audio(DataModelClass.audio),
         showNotification: true,
-      );*/
+        volume: double.infinity,
+
+      );
 
 
 

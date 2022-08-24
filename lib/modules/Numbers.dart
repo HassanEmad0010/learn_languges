@@ -7,20 +7,20 @@ import '../shared/shared.componants/componants.dart';
 class NumberScreen extends StatelessWidget {
   List<DataModelClass> DataList = [
     DataModelClass(
-        text: "Number One", image: "assets/images/numbers/number_one.png",//audio: "assets/sounds/numbers/number_one_sound.mp3"
+        text: "Number One", image: "assets/images/numbers/number_one.png",audio: "assets/sounds/numbers/number_one_sound.mp3"
     ),
     DataModelClass(
-        text: "Number Two", image: "assets/images/numbers/number_two.png",//audio: "assets/sounds/numbers/number_two_sound.mp3"
+        text: "Number Two", image: "assets/images/numbers/number_two.png",audio: "assets/sounds/numbers/number_two_sound.mp3"
     ),
     DataModelClass(
-        text: "Number Three", image: "assets/images/numbers/number_three.png",//audio: "assets/sounds/numbers/number_three_sound.mp3"
+        text: "Number Three", image: "assets/images/numbers/number_three.png",audio: "assets/sounds/numbers/number_three_sound.mp3"
     ),
     DataModelClass(
-        text: "Number Four", image: "assets/images/numbers/number_four.png",//audio: "assets/sounds/numbers/number_four_sound.mp3"
+        text: "Number Four", image: "assets/images/numbers/number_four.png",audio: "assets/sounds/numbers/number_four_sound.mp3"
     ),
     DataModelClass(
-        text: "Number Five", image: "assets/images/numbers/number_five.png",//audio: "assets/sounds/numbers/number_five_sound.mp3"
-    ),/*
+        text: "Number Five", image: "assets/images/numbers/number_five.png",audio: "assets/sounds/numbers/number_five_sound.mp3"
+    ),
     DataModelClass(
         text: "Number Six", image: "assets/images/numbers/number_six.png",audio: "assets/sounds/numbers/number_six_sound.mp3"),
     DataModelClass(
@@ -30,7 +30,7 @@ class NumberScreen extends StatelessWidget {
     DataModelClass(
         text: "Number Nine", image: "assets/images/numbers/number_nine.png",audio: "assets/sounds/numbers/number_nine_sound.mp3"),
     DataModelClass(
-        text: "Number Ten", image: "assets/images/numbers/number_ten.png",audio: "assets/sounds/numbers/number_ten_sound.mp3"),*/
+        text: "Number Ten", image: "assets/images/numbers/number_ten.png",audio: "assets/sounds/numbers/number_ten_sound.mp3"),
   ];
 
   @override

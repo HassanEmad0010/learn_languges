@@ -6,7 +6,8 @@ import '../modules/Colors.dart';
 import '../modules/Family.dart';
 import '../modules/Numbers.dart';
 import '../shared/shared.componants/componants.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   int currentindex=0;
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             currentIndex: currentindex,
 
 
-            iconSize: 44,
+            iconSize: 40,
             items:const <BottomNavigationBarItem> [
               BottomNavigationBarItem(icon: Icon(Icons.home),label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.archive),label: ""),
@@ -47,7 +49,17 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
+        leading:  IconButton(
+            onPressed: (){
+
+              AssetsAudioPlayer.newPlayer().open(
+                Audio("assets/sounds/numbers/number_five_sound.mp3"),
+                showNotification: true,
+                volume: double.infinity,
+              );
+
+            },
+            icon: Icon(Icons.menu)),
         title: const Text("Let's Learn!"),
         centerTitle: true,
 
@@ -93,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     print("3");
                   },
                   child:
-                      buildContainer(color: Colors.tealAccent, text: 'Family')),
+                      buildContainer(color: Colors.blueAccent, text: 'Family')),
 
             ],
           ),
