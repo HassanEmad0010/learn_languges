@@ -1,8 +1,13 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../modules/Colors.dart';
 import '../modules/Family.dart';
 import '../modules/Numbers.dart';
 import '../shared/shared.componants/componants.dart';
+import 'package:audioplayers/audioplayers.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,12 +17,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int currentindex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar:
           BottomNavigationBar(
-            iconSize: 40,
+            onTap: (value) {
+              setState(() {
+
+              });
+
+              print(value);
+              currentindex = value;
+            },
+
+            currentIndex: currentindex,
+
+
+            iconSize: 44,
             items:const <BottomNavigationBarItem> [
               BottomNavigationBarItem(icon: Icon(Icons.home),label: ""),
               BottomNavigationBarItem(icon: Icon(Icons.archive),label: ""),
