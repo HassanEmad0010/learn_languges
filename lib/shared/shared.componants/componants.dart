@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 //import 'package:audioplayers/audioplayers.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 
+import '../../models/DataModel.dart';
+
 
 Widget buildContainer ({
 
@@ -36,7 +38,7 @@ Widget buildContainer ({
 
 Widget buildData ({
 
-  required DataModelClass,
+  required DataModelClass dataModel,
 
   Color color=Colors.brown,
   //required String image,
@@ -48,15 +50,15 @@ Widget buildData ({
 =>Row(
   
   children: [
-    Image.asset(DataModelClass.image),
+    Image.asset(dataModel.image),
     Expanded(
-      child: Text(DataModelClass.text,
+      child: Text(dataModel.text,
       style: TextStyle(color: textColor,fontSize: 25),),
     ),
     IconButton(onPressed: (){
 
       AssetsAudioPlayer.newPlayer().open(
-        Audio(DataModelClass.audio),
+        Audio(dataModel.audio),
         showNotification: true,
         volume: double.infinity,
 

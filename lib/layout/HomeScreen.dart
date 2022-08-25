@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:leaen_languges/modules/Hassan.dart';
 import '../modules/Colors.dart';
 import '../modules/Family.dart';
 import '../modules/Numbers.dart';
@@ -27,14 +28,19 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBar(
             onTap: (value) {
               setState(() {
-
               });
-
               print(value);
               currentindex = value;
+              currentindex==1?Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HassanClass(),
+                ),
+              ):null;
             },
 
             currentIndex: currentindex,
+
 
 
             iconSize: 40,

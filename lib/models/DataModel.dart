@@ -6,9 +6,9 @@ class DataModelClass {
 
   String text;
   String image;
-  String? audio;
+  String audio;
 
-  DataModelClass({required this.text,required this.image,this.audio});
+  DataModelClass({required this.text,required this.image,required this.audio});
 
 
 }

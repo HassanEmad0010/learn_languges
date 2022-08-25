@@ -35,7 +35,7 @@ class ColorsScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (BuildContext, index) =>
-            buildData(DataModelClass: DataList[index]),
+            buildData(dataModel: DataList[index]),
         scrollDirection: Axis.vertical,
         itemCount: DataList.length,
       ),
