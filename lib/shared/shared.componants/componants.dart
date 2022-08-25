@@ -11,19 +11,22 @@ Widget buildContainer ({
   Color color=Colors.brown,
   required String text,
   double width=double.infinity,
-  double height=140,
+  double height=180,
+  BoxShape shape= BoxShape.rectangle,
 
 })
 
 {
 
   return Stack(
+
     alignment: AlignmentDirectional.center,
     children: [
     Container(
       width: width,
       height: height,
       decoration: BoxDecoration(
+        shape:shape,
         color: color,
       ),
 

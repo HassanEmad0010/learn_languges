@@ -9,8 +9,6 @@ import '../modules/Numbers.dart';
 import '../shared/shared.componants/componants.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 
-
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -19,56 +17,42 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  int currentindex=0;
-  bool pressed=false;
+  int currentindex = 0;
+  bool pressed = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:
-          BottomNavigationBar(
-            onTap: (value) {
-              setState(() {
-              });
-              print(value);
-              currentindex = value;
-              currentindex==1?Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HassanClass(),
-                ),
-              ):null;
-            },
-
-            currentIndex: currentindex,
-
-
-
-            iconSize: 40,
-            items:const <BottomNavigationBarItem> [
-              BottomNavigationBarItem(icon: Icon(Icons.home),label: ""),
-              BottomNavigationBarItem(icon: Icon(Icons.archive),label: ""),
-              BottomNavigationBarItem(icon: Icon(Icons.done),label: ""),
-
-
-            ],
-
-          ),
-
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+          setState(() {});
+          print(value);
+          currentindex = value;
+          currentindex == 1
+              ? Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HassanClass(),
+                  ),
+                )
+              : null;
+        },
+        currentIndex: currentindex,
+        iconSize: 40,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.archive), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.done), label: ""),
+        ],
+      ),
       appBar: AppBar(
-        leading:  IconButton(
-            onPressed: (){
-              setState(() {
-
-              });
-              pressed=!pressed;
-
+        leading: IconButton(
+            onPressed: () {
+              setState(() {});
+              pressed = !pressed;
             },
-            icon:pressed?Icon(Icons.menu_book) :Icon(Icons.menu)),
+            icon: pressed ? Icon(Icons.menu_book) : Icon(Icons.menu)),
         title: const Text("Let's Learn!"),
         centerTitle: true,
-
-
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -86,7 +70,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   },
-                  child: buildContainer(color: Colors.blue, text: 'Numbers')),
+                  child: buildContainer(
+                      shape: BoxShape.circle,
+                      color: Colors.blue,
+                      text: 'Numbers')),
+              const SizedBox(
+                height: 20,
+              ),
               GestureDetector(
                   onTap: () {
                     print("2");
@@ -98,7 +88,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                   child: buildContainer(
-                      color: Colors.lightBlue, text: 'Colors')),
+                      shape: BoxShape.circle,
+                      color: Colors.lightBlue,
+                      text: 'Colors')),
+              const SizedBox(
+                height: 20,
+              ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -109,9 +104,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                     print("3");
                   },
-                  child:
-                      buildContainer(color: Colors.blueAccent, text: 'Family')),
-
+                  child: buildContainer(
+                      shape: BoxShape.circle,
+                      color: Colors.blueAccent,
+                      text: 'Family')),
             ],
           ),
         ),
