@@ -21,6 +21,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   int currentindex=0;
+  bool pressed=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,15 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leading:  IconButton(
             onPressed: (){
+              setState(() {
 
-              AssetsAudioPlayer.newPlayer().open(
-                Audio("assets/sounds/numbers/number_five_sound.mp3"),
-                showNotification: true,
-                volume: double.infinity,
-              );
+              });
+              pressed=!pressed;
 
             },
-            icon: Icon(Icons.menu)),
+            icon:pressed?Icon(Icons.menu_book) :Icon(Icons.menu)),
         title: const Text("Let's Learn!"),
         centerTitle: true,
 

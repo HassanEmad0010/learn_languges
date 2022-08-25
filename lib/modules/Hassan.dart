@@ -15,12 +15,12 @@ class HassanClass extends StatelessWidget {
         SingleChildScrollView(
           child: Column(
             children: [
-              buildContainer(text: "My Name"),
-              buildContainer(text: "Is",color: Colors.grey),
-              buildContainer(text: "Hassan"),
-              buildContainer(text: "Emad",color: Colors.grey),
+              buildContainer(text: "Welcome",height:160, ),
+              buildContainer(text: "My Name",color: Colors.grey),
+              buildContainer(text: "Is",),
+              buildContainer(text: "Hassan",color: Colors.grey),
+              buildContainer(text: "Emad",),
               
-              buildContainer(text: "Welcome",height:160 ),
             ],
           ),
         ));
